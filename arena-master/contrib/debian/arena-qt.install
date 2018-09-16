@@ -1,0 +1,6 @@
+usr/local/bin/arena-qt usr/bin
+share/pixmaps/arena32.xpm usr/share/pixmaps
+share/pixmaps/arena16.xpm usr/share/pixmaps
+share/pixmaps/arena128.png usr/share/pixmaps
+debian/arena-qt.desktop usr/share/applications
+debian/arena-qt.protocol usr/share/kde4/services/

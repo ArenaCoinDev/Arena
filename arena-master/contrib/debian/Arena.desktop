@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Arena
+Comment=Arena P2P Cryptocurrency
+Exec=arena-qt %u
+Terminal=false
+Type=Application
+Icon=arena128
+MimeType=x-scheme-handler/arena;
+Categories=Office;Finance;
+Name[en_GB]=Arena

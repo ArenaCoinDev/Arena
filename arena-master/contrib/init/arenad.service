@@ -1,0 +1,22 @@
+[Unit]
+Description=Arena's distributed currency daemon
+After=network.target
+
+[Service]
+User=arenacore
+Group=arenacore
+
+Type=forking
+PIDFile=/var/lib/arenad/arenad.pid
+ExecStart=/usr/bin/arenad -daemon -pid=/var/lib/arenad/arenad.pid \
+-conf=/etc/arenacore/arena.conf -datadir=/var/lib/arenad -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
