@@ -2,7 +2,7 @@
 Arena Core 1.0.0
 ===============================
 
-https://arena.io
+https://arenaco.in
 
 
 What is Arena?
