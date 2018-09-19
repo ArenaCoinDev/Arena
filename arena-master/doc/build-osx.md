@@ -37,6 +37,13 @@ Instructions: Homebrew
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. As such, building with Qt5 is recommended. Qt5 5.7 requires C++11 which Arena Core doesn't fully support yet, Qt5 5.6.2 has some other issues, so make sure to install Qt version < 5.6.2 (5.6.1-1 is recommended).
     brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/e6d954bab88e89c5582498157077756900865070/Formula/qt5.rb
 
+you can also test building by using last qt5 release by using following command
+    brew install qt5
+    
+If you want to build the disk image with make deploy (.dmg / optional), you need RSVG
+
+    brew install librsvg
+    
 ### Building Arena Core
 
 1. Clone the GitHub tree to get the source code and go into the directory.
@@ -59,6 +66,10 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 4.  (Optional) You can also install arenad to your path:
 
         make install
+
+5. (Optional) You can also create a .dmg that contains the .app bundle:
+
+        make deploy
 
 Use Qt Creator as IDE
 ------------------------
