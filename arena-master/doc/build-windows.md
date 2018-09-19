@@ -23,18 +23,23 @@ First install the toolchains:
 To build executables for Windows 32-bit:
 
     cd depends
+    chmod 755 *
     make HOST=i686-w64-mingw32 -j4
     cd ..
+    bash ./autogen.sh
     ./configure --prefix=`pwd`/depends/i686-w64-mingw32
+    chmod 777 ./share/genbuild.sh
     make
 
 To build executables for Windows 64-bit:
 
     cd depends
+    chmod 755 *
     make HOST=x86_64-w64-mingw32 -j4
     cd ..
+    bash ./autogen.sh
     ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
+    chmod 777 ./share/genbuild.sh
     make
 
 For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
-
