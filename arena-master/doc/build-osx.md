@@ -48,7 +48,7 @@ If you want to build the disk image with make deploy (.dmg / optional), you need
 
 1. Clone the GitHub tree to get the source code and go into the directory.
 
-        git clone https://github.com/arenacoin/arenacoin.git
+        git clone https://github.com/arenacoindev/arena.git
         cd arena
 
 2.  Build Arena Core:
