@@ -83,8 +83,8 @@ background-color:transparent;
 background-color:transparent;
 }
 
-.QValidatedLineEdit, .QLineEdit { /* Text Entry Fields */
-border: 1px solid #82C3E6;
+.QValidatedLineEdit, .QLineEdit { /*#82C3E6  #8B008B*/
+border: 1px solid #8B008B;
 font-size:11px;
 min-height:25px;
 outline:0;
@@ -1599,7 +1599,7 @@ QLabel#transactionSumLabel { /* Example of setObjectName for widgets without nam
 color:#333333;
 font-weight:bold;
 }
- 
+
 QLabel#transactionSum { /* Example of setObjectName for widgets without name */
 color:#333333;
 }
@@ -1613,5 +1613,3 @@ background-color:#F8F6F6;
 QDialog#TransactionDescDialog QTextEdit { /* Contents of Receive Coin Dialog */
 border:1px solid #d7d7d7;
 }
-
-
