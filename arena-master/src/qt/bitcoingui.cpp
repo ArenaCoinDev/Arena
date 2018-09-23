@@ -275,23 +275,10 @@ void BitcoinGUI::createActions()
     QActionGroup *tabGroup = new QActionGroup(this);
 
     QString theme = GUIUtil::getThemeName();
-
-	//Overview
-    QPixmap overviewIconInactive(":/icons/" + theme + "/overview");
-    QPixmap overviewIconActive(":icons/" + theme + "/overview_active");
-    QIcon overviewIcon(overviewIconInactive);
-
-    overviewIcon.addPixmap(overviewIconActive,QIcon::Selected,QIcon::On);
-    overviewIcon.addPixmap(overviewIconActive,QIcon::Selected,QIcon::Off);
-    overviewIcon.addPixmap(overviewIconActive,QIcon::Active,QIcon::On);
-    overviewIcon.addPixmap(overviewIconActive,QIcon::Active,QIcon::Off);
-	
-	overviewAction = new QAction(overviewIcon, tr("&Overview"), this);
-
+    overviewAction = new QAction(QIcon(":/icons/" + theme + "/overview"), tr("&Overview"), this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
-
 #ifdef Q_OS_MAC
     overviewAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_1));
 #else
@@ -299,21 +286,7 @@ void BitcoinGUI::createActions()
 #endif
     tabGroup->addAction(overviewAction);
 
-	
-    //Send
-    QPixmap sendIconInactive(":/icons/" + theme + "/send");
-    QPixmap sendIconActive(":icons/" + theme + "/send_active");
-    QIcon sendIcon(sendIconInactive);
-
-    sendIcon.addPixmap(sendIconInactive,QIcon::Selected,QIcon::On);
-    sendIcon.addPixmap(sendIconInactive,QIcon::Selected,QIcon::Off);
-    sendIcon.addPixmap(sendIconInactive,QIcon::Active,QIcon::On);
-    sendIcon.addPixmap(sendIconInactive,QIcon::Active,QIcon::Off);
-	
-	sendCoinsAction = new QAction(sendIcon, tr("&Send"), this);
-	
-	//sendCoinsAction = new QAction(QIcon(":/icons/" + theme + "/send"), tr("&Send"), this);
-		
+    sendCoinsAction = new QAction(QIcon(":/icons/" + theme + "/send"), tr("&Send"), this);
     sendCoinsAction->setStatusTip(tr("Send coins to a Arena address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
@@ -322,27 +295,13 @@ void BitcoinGUI::createActions()
 #else
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
 #endif
-
     tabGroup->addAction(sendCoinsAction);
 
     sendCoinsMenuAction = new QAction(QIcon(":/icons/" + theme + "/send"), sendCoinsAction->text(), this);
     sendCoinsMenuAction->setStatusTip(sendCoinsAction->statusTip());
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
-    //receive
-	QPixmap receiveIconInactive(":/icons/" + theme + "/receive");
-    QPixmap receiveIconActive(":icons/" + theme + "/receive_active");
-    QIcon receiveIcon(receiveIconInactive);
-
-    receiveIcon.addPixmap(receiveIconInactive,QIcon::Selected,QIcon::On);
-    receiveIcon.addPixmap(receiveIconInactive,QIcon::Selected,QIcon::Off);
-    receiveIcon.addPixmap(receiveIconInactive,QIcon::Active,QIcon::On);
-    receiveIcon.addPixmap(receiveIconInactive,QIcon::Active,QIcon::Off);
-	
-	receiveCoinsAction = new QAction(receiveIcon, tr("&Receive"), this);
-
-	
-	//receiveCoinsAction = new QAction(QIcon(":/icons/" + theme + "/receiving_addresses"), tr("&Receive"), this);
+    receiveCoinsAction = new QAction(QIcon(":/icons/" + theme + "/receiving_addresses"), tr("&Receive"), this);
     receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and arena: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
@@ -357,20 +316,6 @@ void BitcoinGUI::createActions()
     receiveCoinsMenuAction->setStatusTip(receiveCoinsAction->statusTip());
     receiveCoinsMenuAction->setToolTip(receiveCoinsMenuAction->statusTip());
 
-	
-	//history / transactions
-	QPixmap historyIconInactive(":/icons/" + theme + "/history");
-    QPixmap historyIconActive(":icons/" + theme + "/history_active");
-    QIcon historyIcon(historyIconInactive);
-
-    historyIcon.addPixmap(historyIconInactive,QIcon::Selected,QIcon::On);
-    historyIcon.addPixmap(historyIconInactive,QIcon::Selected,QIcon::Off);
-    historyIcon.addPixmap(historyIconInactive,QIcon::Active,QIcon::On);
-    historyIcon.addPixmap(historyIcon,QIcon::Active,QIcon::Off);
-	
-	historyIconInactive = new QAction(receiveIcon, tr("&Receive"), this);
-
-	
     historyAction = new QAction(QIcon(":/icons/" + theme + "/history"), tr("&Transactions"), this);
     historyAction->setStatusTip(tr("Browse transaction history"));
     historyAction->setToolTip(historyAction->statusTip());
@@ -384,19 +329,8 @@ void BitcoinGUI::createActions()
 
 #ifdef ENABLE_WALLET
     QSettings settings;
-	
-	//masternodes
     if (settings.value("fShowMasternodesTab").toBool()) {
-		QPixmap masternodeIconInactive(":/icons/" + theme + "/masternodes");
-		QPixmap masternodeIconActive(":icons/" + theme + "/masternodes_active");
-		QIcon masternodeIcon(masternodeIconInactive);
-
-		masternodeIcon.addPixmap(masternodeIconInactive,QIcon::Selected,QIcon::On);
-		masternodeIcon.addPixmap(masternodeIconInactive,QIcon::Selected,QIcon::Off);
-		masternodeIcon.addPixmap(masternodeIconInactive,QIcon::Active,QIcon::On);
-		masternodeIcon.addPixmap(masternodeIcon,QIcon::Active,QIcon::Off);
-		
-//		masternodeAction = new QAction(QIcon(":/icons/" + theme + "/masternodes"), tr("&Masternodes"), this);
+        masternodeAction = new QAction(QIcon(":/icons/" + theme + "/masternodes"), tr("&Masternodes"), this);
         masternodeAction->setStatusTip(tr("Browse masternodes"));
         masternodeAction->setToolTip(masternodeAction->statusTip());
         masternodeAction->setCheckable(true);
@@ -472,7 +406,7 @@ void BitcoinGUI::createActions()
     openConfEditorAction = new QAction(QIcon(":/icons/" + theme + "/edit"), tr("Open Wallet &Configuration File"), this);
     openConfEditorAction->setStatusTip(tr("Open configuration file"));
     openMNConfEditorAction = new QAction(QIcon(":/icons/" + theme + "/edit"), tr("Open &Masternode Configuration File"), this);
-    openMNConfEditorAction->setStatusTip(tr("Open Masternode configuration file"));    
+    openMNConfEditorAction->setStatusTip(tr("Open Masternode configuration file"));
     showBackupsAction = new QAction(QIcon(":/icons/" + theme + "/browse"), tr("Show Automatic &Backups"), this);
     showBackupsAction->setStatusTip(tr("Show automatically created wallet backups"));
     // initially disable the debug window menu items
@@ -520,7 +454,7 @@ void BitcoinGUI::createActions()
 
     // Get restart command-line parameters and handle restart
     connect(rpcConsole, SIGNAL(handleRestart(QStringList)), this, SLOT(handleRestart(QStringList)));
-    
+
     // prevents an open debug window from becoming stuck/unusable on client shutdown
     connect(quitAction, SIGNAL(triggered()), rpcConsole, SLOT(hide()));
 
@@ -661,7 +595,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
             MacDockIconHandler *dockIconHandler = MacDockIconHandler::instance();
             dockIconHandler->setMainWindow((QMainWindow *)this);
             dockIconMenu = dockIconHandler->dockMenu();
- 
+
             createIconMenu(dockIconMenu);
 #endif
         }
