@@ -387,7 +387,16 @@ void BitcoinGUI::createActions()
 	
 	//masternodes
     if (settings.value("fShowMasternodesTab").toBool()) {
-        masternodeAction = new QAction(QIcon(":/icons/" + theme + "/masternodes"), tr("&Masternodes"), this);
+		QPixmap masternodeIconInactive(":/icons/" + theme + "/masternodes");
+		QPixmap masternodeIconActive(":icons/" + theme + "/masternodes_active");
+		QIcon masternodeIcon(masternodeIconInactive);
+
+		masternodeIcon.addPixmap(masternodeIconInactive,QIcon::Selected,QIcon::On);
+		masternodeIcon.addPixmap(masternodeIconInactive,QIcon::Selected,QIcon::Off);
+		masternodeIcon.addPixmap(masternodeIconInactive,QIcon::Active,QIcon::On);
+		masternodeIcon.addPixmap(masternodeIcon,QIcon::Active,QIcon::Off);
+		
+//		masternodeAction = new QAction(QIcon(":/icons/" + theme + "/masternodes"), tr("&Masternodes"), this);
         masternodeAction->setStatusTip(tr("Browse masternodes"));
         masternodeAction->setToolTip(masternodeAction->statusTip());
         masternodeAction->setCheckable(true);
