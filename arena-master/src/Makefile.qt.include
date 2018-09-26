@@ -194,14 +194,19 @@ RES_ICONS = \
   qt/res/icons/drkblue/eye_plus.png \
   qt/res/icons/drkblue/filesave.png \
   qt/res/icons/drkblue/history.png \
+  qt/res/icons/drkblue/history_active.png \
   qt/res/icons/drkblue/key.png \
   qt/res/icons/drkblue/lock_closed.png \
   qt/res/icons/drkblue/lock_open.png \
   qt/res/icons/drkblue/masternodes.png \
+  qt/res/icons/drkblue/masternodes_active.png \
   qt/res/icons/drkblue/overview.png \
+  qt/res/icons/drkblue/overview_active.png \
   qt/res/icons/drkblue/quit.png \
   qt/res/icons/drkblue/receive.png \
+  qt/res/icons/drkblue/receive_active.png \
   qt/res/icons/drkblue/remove.png \
+  qt/res/icons/drkblue/send_active.png \
   qt/res/icons/drkblue/send.png \
   qt/res/icons/drkblue/synced.png \
   qt/res/icons/drkblue/transaction0.png \
@@ -242,15 +247,20 @@ RES_ICONS = \
   qt/res/icons/crownium/eye_plus.png \
   qt/res/icons/crownium/filesave.png \
   qt/res/icons/crownium/history.png \
+  qt/res/icons/crownium/history_active.png \
   qt/res/icons/crownium/key.png \
   qt/res/icons/crownium/lock_closed.png \
   qt/res/icons/crownium/lock_open.png \
   qt/res/icons/crownium/masternodes.png \
+  qt/res/icons/crownium/masternodes_active.png \
   qt/res/icons/crownium/overview.png \
+  qt/res/icons/crownium/overview_active.png \
   qt/res/icons/crownium/quit.png \
   qt/res/icons/crownium/receive.png \
+  qt/res/icons/crownium/receive_active.png \
   qt/res/icons/crownium/remove.png \
   qt/res/icons/crownium/send.png \
+  qt/res/icons/crownium/send_active.png \
   qt/res/icons/crownium/synced.png \
   qt/res/icons/crownium/transaction0.png \
   qt/res/icons/crownium/transaction2.png \
@@ -290,15 +300,20 @@ RES_ICONS = \
   qt/res/icons/light/eye_plus.png \
   qt/res/icons/light/filesave.png \
   qt/res/icons/light/history.png \
+  qt/res/icons/light/history_active.png \
   qt/res/icons/light/key.png \
   qt/res/icons/light/lock_closed.png \
   qt/res/icons/light/lock_open.png \
   qt/res/icons/light/masternodes.png \
+  qt/res/icons/light/masternodes_active.png \
   qt/res/icons/light/overview.png \
+  qt/res/icons/light/overview_active.png \
   qt/res/icons/light/quit.png \
   qt/res/icons/light/receive.png \
+  qt/res/icons/light/receive_active.png \
   qt/res/icons/light/remove.png \
   qt/res/icons/light/send.png \
+  qt/res/icons/light/send_active.png \
   qt/res/icons/light/synced.png \
   qt/res/icons/light/transaction0.png \
   qt/res/icons/light/transaction2.png \
@@ -338,15 +353,20 @@ RES_ICONS = \
   qt/res/icons/trad/eye_plus.png \
   qt/res/icons/trad/filesave.png \
   qt/res/icons/trad/history.png \
+  qt/res/icons/trad/history_active.png \
   qt/res/icons/trad/key.png \
   qt/res/icons/trad/lock_closed.png \
   qt/res/icons/trad/lock_open.png \
   qt/res/icons/trad/masternodes.png \
+  qt/res/icons/trad/masternodes_active.png \
   qt/res/icons/trad/overview.png \
+  qt/res/icons/trad/overview_active.png \
   qt/res/icons/trad/quit.png \
   qt/res/icons/trad/receive.png \
+  qt/res/icons/trad/receive_active.png \
   qt/res/icons/trad/remove.png \
   qt/res/icons/trad/send.png \
+  qt/res/icons/trad/send_active.png \
   qt/res/icons/trad/synced.png \
   qt/res/icons/trad/transaction0.png \
   qt/res/icons/trad/transaction2.png \
