@@ -21,9 +21,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(ARNA);
-    unitlist.append(mARNA);
-    unitlist.append(uARNA);
+    unitlist.append(AR3NA);
+    unitlist.append(mAR3NA);
+    unitlist.append(uAR3NA);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -32,9 +32,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case ARNA:
-    case mARNA:
-    case uARNA:
+    case AR3NA:
+    case mAR3NA:
+    case uAR3NA:
     case duffs:
         return true;
     default:
@@ -48,9 +48,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case ARNA: return QString("ARENA");
-            case mARNA: return QString("mARENA");
-            case uARNA: return QString::fromUtf8("μARENA");
+            case AR3NA: return QString("ARENA");
+            case mAR3NA: return QString("mARENA");
+            case uAR3NA: return QString::fromUtf8("μARENA");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -59,9 +59,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case ARNA: return QString("tARENA");
-            case mARNA: return QString("mtARENA");
-            case uARNA: return QString::fromUtf8("μtARENA");
+            case AR3NA: return QString("tARENA");
+            case mAR3NA: return QString("mtARENA");
+            case uAR3NA: return QString::fromUtf8("μtARENA");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -74,9 +74,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case ARNA: return QString("Arena");
-            case mARNA: return QString("Milli-Arena (1 / 1" THIN_SP_UTF8 "000)");
-            case uARNA: return QString("Micro-Arena (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case AR3NA: return QString("Arena");
+            case mAR3NA: return QString("Milli-Arena (1 / 1" THIN_SP_UTF8 "000)");
+            case uAR3NA: return QString("Micro-Arena (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-Arena (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -85,9 +85,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case ARNA: return QString("TestArenas");
-            case mARNA: return QString("Milli-TestArena (1 / 1" THIN_SP_UTF8 "000)");
-            case uARNA: return QString("Micro-TestArena (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case AR3NA: return QString("TestArenas");
+            case mAR3NA: return QString("Milli-TestArena (1 / 1" THIN_SP_UTF8 "000)");
+            case uAR3NA: return QString("Micro-TestArena (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestArena (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -98,9 +98,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case ARNA:  return 100000000;
-    case mARNA: return 100000;
-    case uARNA: return 100;
+    case AR3NA:  return 100000000;
+    case mAR3NA: return 100000;
+    case uAR3NA: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -110,9 +110,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case ARNA: return 8;
-    case mARNA: return 5;
-    case uARNA: return 2;
+    case AR3NA: return 8;
+    case mAR3NA: return 5;
+    case uAR3NA: return 2;
     case duffs: return 0;
     default: return 0;
     }

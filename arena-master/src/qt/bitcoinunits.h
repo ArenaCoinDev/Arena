@@ -59,9 +59,9 @@ public:
      */
     enum Unit
     {
-        ARNA,
-        mARNA,
-        uARNA,
+        AR3NA,
+        mAR3NA,
+        uAR3NA,
         duffs
     };
 
