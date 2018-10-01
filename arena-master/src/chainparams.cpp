@@ -119,7 +119,7 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1534126415, 1324759, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1538363833, 370928, 0x1e0ffff0, 1, 10 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
 /*
 	 //////////////
@@ -162,10 +162,10 @@ public:
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
 */
-        assert(consensus.hashGenesisBlock == uint256S("00000de677eb4807c2141e8cb0b94e3e206553b0373d241c7de25a2c4e523e9c"));
-        assert(genesis.hashMerkleRoot == uint256S("6fa77c78f55259fe8709dfdb321ebe2b0e5e715d32d9a9971a2f653348ff665d"));
-        vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
-        vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
+        assert(consensus.hashGenesisBlock == uint256S("00000792978c70d1939ba4043658932216cd7887036684de96b7e40326f43129"));
+        assert(genesis.hashMerkleRoot == uint256S("8198ffb6fb8c2774c3ed862b611d9edfec033b285184ba7cc631275bf2f8a079"));
+        vSeeds.push_back(CDNSSeedData("arenaseed2", "dnsseeder1.arena.dns"));
+        vSeeds.push_back(CDNSSeedData("arenaseed1", "dnsseeder2.arena.dns"));
         // Arena addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         // Arena script addresses start with '7'
@@ -192,7 +192,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("00000de677eb4807c2141e8cb0b94e3e206553b0373d241c7de25a2c4e523e9c")),
+            ( 0, uint256S("00000792978c70d1939ba4043658932216cd7887036684de96b7e40326f43129")),
             1534126415, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
@@ -253,7 +253,7 @@ public:
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1513728000, 21635, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1513728000, 21635, 0x1e0ffff0, 1, 10 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
      //   assert(consensus.hashGenesisBlock == uint256S("0x0000000f350d9039575f6446584f4ae4317bed76aae26ef1f2381ff73f7cd68d"));
@@ -350,7 +350,7 @@ public:
         nDefaultPort = 18050;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1513814400, 3, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1513814400, 3, 0x207fffff, 1, 10 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
         //assert(consensus.hashGenesisBlock == uint256S("0x5a2bd287d108e8ae36227683cc9f47c4ed4b93a19b29684dec3b1a7189248eb4"));
