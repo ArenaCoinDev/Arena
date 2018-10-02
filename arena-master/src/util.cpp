@@ -660,22 +660,10 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 void AddSeedsToConfigFile(FILE* configFile) {
 	fprintf(configFile,"onlynet=ipv4\r\n");
-	fprintf(configFile,"addnode=144.202.109.173:16050\r\n");
-	fprintf(configFile,"addnode=140.143.129.82:16050\r\n");
-	fprintf(configFile,"addnode=113.243.73.116:16050\r\n");
-	fprintf(configFile,"addnode=45.32.226.148:16050\r\n");
-	fprintf(configFile,"addnode=141.101.14.64:16050\r\n");
-	fprintf(configFile,"addnode=84.55.19.210:16050\r\n");
-	fprintf(configFile,"addnode=108.61.142.63:16050\r\n");
-	fprintf(configFile,"addnode=8.12.22.78:16050\r\n");
-	fprintf(configFile,"addnode=108.160.138.215:16050\r\n");
-	fprintf(configFile,"addnode=167.99.206.101\r\n");
-	fprintf(configFile,"addnode=159.65.152.125\r\n");
-	fprintf(configFile,"addnode=104.236.81.19\r\n");
-	fprintf(configFile,"addnode=167.88.163.202:16050\r\n");
-	fprintf(configFile,"addnode=167.88.163.204:16050\r\n");
-	fprintf(configFile,"addnode=35.178.15.243:16050\r\n");
-	fprintf(configFile,"addnode=155.94.174.81:16050\r\n");
+	fprintf(configFile,"addnode=144.202.103.0:16050\r\n");
+	fprintf(configFile,"addnode=149.28.195.72:16050\r\n");
+	fprintf(configFile,"addnode=195.154.235.48:16050\r\n");
+	fprintf(configFile,"addnode=188.127.115.91:16050\r\n");
 }
 
 #ifndef WIN32
