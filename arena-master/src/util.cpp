@@ -659,7 +659,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 }
 
 void AddSeedsToConfigFile(FILE* configFile) {
-	fprintf(configFile,"onlynet=ipv4\r\n");
+	fprintf(configFile,"onlynet=ipv4\n");
 	fprintf(configFile,"addnode=144.202.103.0:16050\n");
 	fprintf(configFile,"addnode=149.28.195.72:16050\n");
 	fprintf(configFile,"addnode=195.154.235.48:16050\n");
