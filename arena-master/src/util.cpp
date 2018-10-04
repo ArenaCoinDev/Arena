@@ -660,10 +660,13 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 void AddSeedsToConfigFile(FILE* configFile) {
 	fprintf(configFile,"onlynet=ipv4\r\n");
-	fprintf(configFile,"addnode=144.202.103.0:16050\r\n");
-	fprintf(configFile,"addnode=149.28.195.72:16050\r\n");
-	fprintf(configFile,"addnode=195.154.235.48:16050\r\n");
-	fprintf(configFile,"addnode=188.127.115.91:16050\r\n");
+	fprintf(configFile,"addnode=144.202.103.0:16050\n");
+	fprintf(configFile,"addnode=149.28.195.72:16050\n");
+	fprintf(configFile,"addnode=195.154.235.48:16050\n");
+	fprintf(configFile,"addnode=188.127.115.91:16050\n");
+	fprintf(configFile,"addnode=45.77.168.197:16050\n");
+	fprintf(configFile,"addnode=95.179.203.220:16050\n");
+
 }
 
 #ifndef WIN32
