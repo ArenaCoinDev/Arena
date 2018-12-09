@@ -28,6 +28,8 @@ To build executables for Windows 32-bit:
     cd ..
     bash ./autogen.sh
     ./configure --prefix=`pwd`/depends/i686-w64-mingw32
+    OR
+    CONFIG_SITE=$PWD/depends/i686-w64-mingw32/share/config.site ./configure --prefix=/
     chmod 777 ./share/genbuild.sh
     make
 
